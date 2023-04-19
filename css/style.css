@@ -1,0 +1,116 @@
+
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 30px;
+}
+
+.job img {
+    grid-area: 2/1/3/2;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+/* Change the link color to #111 (black) on hover */
+
+p {
+    font-family: "Arial" ;
+}
+.job {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 10% 1fr;
+    /* grid-template-rows: 20px 50%; */
+    border: rgba(17, 17, 17, 0.247) solid 5px;
+    border-radius: 10px ;
+    justify-items: center;
+}
+
+.bullets {
+    list-style-type: disc inside;
+    margin-left: 20px;
+    
+}
+
+
+.job img {
+    grid-area: 2/1/3/4;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.job p:last-child {
+    grid-area: 3/2/4/4;
+}
+
+.bullets {
+    padding-left: 10px;
+}
+.title {
+    justify-self: start;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.skills-grid {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-grid img {
+    max-width: 20%; /* make sure the images don't exceed their container */
+    height: auto; /* maintain the aspect ratio of the images */
+    margin: 0 10px; /* add some horizontal spacing between the images */
+    object-fit: contain;
+}
+
+.job p:nth-of-type(2) {
+    visibility: hidden;
+    font-size: large;
+    font-weight: bold;
+
+}
+.job div p:nth-of-type(2) {
+    visibility: visible ;
+    font-weight: 100;
+    font-size: medium;
+    
+
+}
+
+@media (min-width: 600px) {
+    p {
+        margin: 0%;
+    }
+
+    .job img {
+        grid-area: 2/1/3/2;
+        max-width: 100%;
+        max-height: 100%;
+
+    }
+    .job p:first-child {
+        grid-area: 1/1/2/2;
+    }
+    .job p:last-child {
+        grid-area: 1/2/3/3;
+    }
+
+    .skills-grid {
+        justify-content: left;
+        flex-direction: row;
+    }
+
+    .skills-grid img {
+        max-width: 100px; /* make sure the images don't exceed their container */
+    }
+
+}
+
+@media (min-width: 900px) {
+    .job p:nth-of-type(2) {
+        visibility: visible;
+    
+    }
+}

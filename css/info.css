@@ -1,0 +1,34 @@
+.photo-gallery {
+    display: flex; /* use CSS grid to create a grid of images */
+    flex-direction: column;
+    gap: 10px; /* add some spacing between the grid items */
+    max-width: 100%; /* make sure the grid doesn't exceed the width of its container */
+    margin: 0 auto; /* center the grid horizontally */
+}
+  
+
+  
+
+@media (min-width: 600px) {
+    .photo-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .photo-gallery img {
+        width: 30%; /* set the width of the image to 100% of its container */
+        height: auto; /* set the height of the image to 100% of its container */
+        object-fit: cover; /* make sure the image fills its container without stretching */
+    }
+  
+
+
+}
+@media (min-width: 900px) {
+
+    .photo-gallery img {
+        width: 250px;
+    }
+    
+}
